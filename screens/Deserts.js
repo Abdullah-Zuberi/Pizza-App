@@ -1,11 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import database from '@react-native-firebase/database';
-import {
-  ActivityIndicator,
-  ScrollView,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {ActivityIndicator, ScrollView, View} from 'react-native';
 import {useSelector} from 'react-redux';
 import AddButton from '../components/AddButton';
 import Product from '../components/Product';
@@ -21,7 +16,7 @@ export default function ShoppingCart() {
     const desertRef = database().ref(`deserts/`);
     desertRef.on('value', snapshot => {
       const data = snapshot.val();
-      console.log('abdullah', Object.values(data));
+      console.log(Object.values(data));
       data ? setDesertsList(Object.values(data).reverse()) : null;
       setDesertsList(Object.values(data));
     });

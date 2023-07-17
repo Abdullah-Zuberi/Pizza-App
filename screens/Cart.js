@@ -181,13 +181,13 @@ export default function Cart({navigation}) {
             <Text
               style={{
                 color: '#4D4D4D',
-                fontSize: 25,
+                fontSize: 15,
                 fontWeight: 'bold',
               }}>
               Sub Total: ${totalPrice}
             </Text>
           </View>
-          <View style={{backgroundColor: 'white'}}>
+          {/* <View style={{backgroundColor: 'white'}}>
             <TouchableOpacity
               onPress={() => console.log(navigation)}
               style={{
@@ -214,7 +214,7 @@ export default function Cart({navigation}) {
                 Checkout
               </Text>
             </TouchableOpacity>
-          </View>
+          </View> */}
         </>
       ) : null}
     </>
